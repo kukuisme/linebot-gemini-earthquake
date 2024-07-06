@@ -125,10 +125,7 @@ async def handle_callback(request: Request):
             elif text_condition == 'B':
                 model = genai.GenerativeModel('gemini-pro')
                 response = model.generate_content(
-                    f'Taiwanese tone, the following message is summarized in Traditional Chinese using less than 5 checklist points. \n{messages}',
-                    safety_settings={HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
-                                     HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,}
-                )
+                    f'Taiwanese tone, the following message is summarized in Traditional Chinese using less than 5 checklist points. \n{messages}')
                 reply_msg = response.text
             else:
                 # model = genai.GenerativeModel('gemini-pro')
