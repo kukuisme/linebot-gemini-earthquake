@@ -109,8 +109,9 @@ async def handle_callback(request: Request):
 
             bot_condition = {
                 "清空": 'A',
-                "開心": 'B',
-                "性侵": 'C',
+                "摘要": 'B',
+                "地震": 'C',
+                "氣候": 'D',
                 "其他": 'E'
             }
 
