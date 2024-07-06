@@ -109,9 +109,7 @@ async def handle_callback(request: Request):
 
             bot_condition = {
                 "清空": 'A',
-                "摘要": 'B',
-                "地震": 'C',
-                "氣候": 'D',
+                "我": 'B',
                 "其他": 'E'
             }
 
