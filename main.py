@@ -128,7 +128,7 @@ async def handle_callback(request: Request):
             elif text_condition == 'B':
                 model = genai.GenerativeModel('gemini-pro')
                 response = model.generate_content(
-                    f'The location is Taiwan and the following message is summarized in Traditional Chinese using less than 5 list points. \n{messages}')
+                    f'Taiwanese tone, the following message is summarized in Traditional Chinese using less than 5 checklist points. \n{messages}')
                 reply_msg = response.text
             elif text_condition == 'C':
                 print('='*10)
