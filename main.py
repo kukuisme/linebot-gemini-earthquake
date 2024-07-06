@@ -110,6 +110,7 @@ async def handle_callback(request: Request):
             bot_condition = {
                 "清空": 'A',
                 "開心": 'B',
+                "性侵": 'C',
                 "其他": 'E'
             }
 
@@ -130,13 +131,9 @@ async def handle_callback(request: Request):
                 reply_msg = response.text
             elif text_condition == 'C':
                 print('='*10)
-                print("地震相關訊息")
+                print("相信你現在一定很難受，但以下是我的建議!!!!")
                 print('='*10)
-                model = genai.GenerativeModel('gemini-pro-vision')
-                OPEN_API_KEY = os.getenv('OPEN_API_KEY')
-                earth_res = requests.get(f'https://opendata.cwa.gov.tw/fileapi/v1/opendataapi/E-A0015-003?Authorization={OPEN_API_KEY}&downloadType=WEB&format=JSON')
-                url = earth_res.json()["cwaopendata"]["Dataset"]["Resource"]["ProductURL"]
-                reply_msg = check_image_quake(url)+f'\n\n{url}'
+                reply_msg = '透過撥打24小時專線「113」或「02-23615295分機226、227」與專業的社工諮詢'
             elif text_condition == 'D':
                 location_text = '台北市'
                 location = check_location_in_message(location_text)
