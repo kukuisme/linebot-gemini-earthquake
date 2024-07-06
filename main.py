@@ -108,7 +108,7 @@ async def handle_callback(request: Request):
                 messages = chatgpt
 
             bot_condition = {
-                #"清空": 'A',
+                "清空": 'A',
                 "摘要": 'B',
             }
 
