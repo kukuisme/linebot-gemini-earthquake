@@ -109,7 +109,7 @@ async def handle_callback(request: Request):
 
             bot_condition = {
                 "清空": 'A',
-                "我": 'B',
+                "開心": 'B',
                 "其他": 'E'
             }
 
