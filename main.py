@@ -123,7 +123,7 @@ async def handle_callback(request: Request):
                 fdb.delete(user_chat_path, None)
                 reply_msg = '已清空對話紀錄'
             elif text_condition == 'B':
-                model = genai.GenerativeModel('gemini-1.5-pro')
+                model = genai.GenerativeModel('gemini-pro')
                 response = model.generate_content(
                     f'Taiwanese tone, the following message is summarized in Traditional Chinese using less than 5 checklist points. \n{messages}',
                     safety_settings={HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
